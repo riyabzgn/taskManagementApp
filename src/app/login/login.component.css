@@ -4,7 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 50px;
 }
+
+
 
 .bgImage{
     position:absolute;
@@ -19,11 +22,13 @@
 .heading1{
     display: flex;
     justify-content:space-around;
-    color: #66FcF1;
+    color: white;
+    /* color: #a5a7a1; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* transform: translate(41%,205%); */
-    background-color: #0B0C10;
+    background-color: #0b0c105c;
     padding:10px;
+    margin-top: 50px;
     border-radius: 4px;
     width:800px;
 }
@@ -37,8 +42,10 @@
     box-shadow: #000000 0px 4px 16px;
     width:400px;
     height: 500px;
-    background-color: #0B0C10 ;
+    background-color: #0b0c108b ;
     border-radius: 10px;
+    row-gap: 50px;
+
 }
 
 .formItems{
@@ -47,14 +54,18 @@
 
 .loginHeading{
     /* margin-left:35px; */
-    color: #66FcF1;
+    color: white;
+    /* color: #a5a7a1; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
 
 }
 
 
 
 .inputBox{
+    font-size: 20px;
+
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #FFFFFF;
@@ -89,7 +100,8 @@
     align-items: center;
     width:100%;
     background-color: #0B0C10;
-    border: 1px solid #66FcF1;
+    /* border: 1px solid #66FcF1; */
+    border: none;
     height:40px;
     color: white;
     margin-top: 10px;
@@ -98,7 +110,7 @@
 }
 
 .loginButton:hover{
-    background-color: #66FcF1;
+    background-color: white;
     color: black;
 }
 

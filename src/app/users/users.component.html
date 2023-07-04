@@ -15,7 +15,7 @@
         <div class="col col-5">Actions</div>
         <!-- <div class="col col-5">Gender</div> -->
       </li>
-      <li class="table-row">
+      <!-- <li class="table-row">
         <div class="col col-1">202000533</div>
         <div class="col col-2">Riya Bazgain </div>
         <div class="col col-3">riyabzgn9@gmail.com</div>
@@ -28,13 +28,13 @@
         <div class="col col-3">pritha@gmail.com</div>
         <div class="col col-4">01/12/2000</div>
         <div class="col col-5"><button class="btn">Delete</button><button class="btn">Edit</button></div>
-      </li>
-      <li class="table-row">
-        <div class="col col-1">{{formValue[0]['value']}}</div>
-        <div class="col col-2">{{formValue[1]['value']}} </div>
-        <div class="col col-3">{{formValue[2]['value']}}</div>
-        <div class="col col-4">{{formValue[3]['value']}}</div>
-        <div class="col col-5"><button class="btn">Delete</button><button class="btn">Edit</button></div>
+      </li> -->
+      <li class="table-row" *ngFor="let formVal of formValue; let i=index ">
+        <div class="col col-1" >{{formVal.emp}}</div>
+        <div class="col col-2">{{formVal.name}} </div>
+        <div class="col col-3">{{formVal.email}}</div>
+        <div class="col col-4">{{formVal.dob}}</div>
+        <div class="col col-5"><button class="btn" (click)="deleteUser(i)">Delete</button><button class="btn">Edit</button></div>
         <!-- <div class="col col-5">{{formValue[4]['value']}}</div> -->
       </li>
     </ul>

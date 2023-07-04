@@ -15,10 +15,12 @@ export class UsersComponent {
   }
   formValue: any[]= [];
 
+  deleteUser(index: number){
+    this.formValue.splice(index, 1);
+  }
 
   constructor(private router: Router, private dataservice: DataService){
     this.formValue= this.dataservice.getFormValue();
     console.log(this.formValue);
   }
 }
-

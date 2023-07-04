@@ -8,8 +8,8 @@ export class DataService {
 
   constructor() { }
 
-  setFormValue(data: any[]):void{
-    this.formData= data;
+  setFormValue(data: any){
+    this.formData.push(data);
     console.log('this.formData', this.formData);
   }
 

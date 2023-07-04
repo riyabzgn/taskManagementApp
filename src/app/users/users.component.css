@@ -1,82 +1,77 @@
-.button{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 10px;
+.button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
 }
 
-.addUserButton{
-    width:200px;
-    height: 50px;
-    background-color: #788da0;
-    border: none;
+.addUserButton {
+  width: 200px;
+  height: 50px;
+  background-color: #788da0;
+  border: none;
 }
 
-.addUserButton:hover{
-    background-color: #023047;
-    color: white;
-
+.addUserButton:hover {
+  background-color: #023047;
+  color: white;
 }
 
 body {
-    font-family: 'lato', sans-serif;
-  }
-  .container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  h2 {
-    font-size: 26px;
-    margin: 20px 0;
-    text-align: center;
-    /* small {
-      font-size: 0.5em;
-    } */
-  }
-.btn{
-  width:90%;
-  height:20px;
-  margin:5px;
+  font-family: "lato", sans-serif;
 }
-  
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-    li {
-      border-radius: 3px;
-      padding: 25px 30px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 25px;
-      align-items: center;
-    }
-    .table-header {
-      background-color: #788da0;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    .table-row {
-      background-color: #ffffff;
-      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-    }
-    .col-1 {
-      flex-basis: 15%;
-    }
-    .col-2 {
-      flex-basis: 25%;
-    }
-    .col-3 {
-      flex-basis: 25%;
-    }
-    .col-4 {
-      flex-basis: 20%;
-    }
-    .col-5{
-      flex-basis: 15%;
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  /* small {
+    font-size: 0.5em;
+  } */
+}
+.btn {
+  width: 90%;
+  height: 20px;
+  margin: 5px;
+}
 
-    }
-    
-   
+li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.table-header {
+  background-color: #788da0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.col-1 {
+  flex-basis: 15%;
+}
+.col-2 {
+  flex-basis: 25%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 20%;
+}
+.col-5 {
+  flex-basis: 15%;
+}

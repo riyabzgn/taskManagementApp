@@ -1,38 +1,42 @@
 <div class="loginPage">
     <img class="bgImage">
     <h1 class="heading1">WELCOME BACK!</h1>
-<div class="loginCard">
-    <div class="heading">
-        <h2 class="loginHeading">LOGIN</h2>
+    <div class="loginCard">
+        <div class="heading">
+            <h2 class="loginHeading">LOGIN</h2>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="formItems">
+                <div class="input">
+                    <input class="inputBox" type="text" placeholder="Email" formControlName='email'>
+                    <span class="error">
+                        <ng-container
+                            *ngIf="(loginForm.get('email')?.errors?.['required'] && ( loginForm.get('email')?.dirty || loginForm.get('email')?.touched || isSubmitted))">
+                            Email Required
+                        </ng-container>
+                        <ng-container
+                            *ngIf="(loginForm.get('email')?.invalid && !(loginForm.get('email')?.errors?.['required']))">
+                            Invalid Email
+                        </ng-container>
+                    </span>
+                </div>
+                <div class="input">
+                    <input class="inputBox" type="password" placeholder="Password" formControlName='password'>
+                    <span class="error">
+                        <ng-container
+                            *ngIf="(loginForm.get('password')?.errors?.['required'] && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty || isSubmitted))">
+                            Password Required
+                        </ng-container>
+                        <ng-container
+                            *ngIf="(loginForm.get('password')?.errors?.['passwordInvalid'] && !(loginForm.get('password')?.errors?.['required']))">
+                            Invalid Password
+                        </ng-container>
+                    </span>
+                </div>
+                <div class="button">
+                    <button class="loginButton" type="submit">LOG IN</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <form [formGroup]= "loginForm" (ngSubmit)="login()">
-        <div class="formItems">
-        <div class="input">
-            <input class="inputBox" type="text" placeholder="Email" formControlName= 'email'>
-            <span class="error">
-                <ng-container *ngIf="(loginForm.get('email')?.errors?.['required'] && ( loginForm.get('email')?.dirty || loginForm.get('email')?.touched || isSubmitted))">
-                    Email Required 
-                </ng-container>
-                <ng-container *ngIf="(loginForm.get('email')?.invalid && !(loginForm.get('email')?.errors?.['required']))">
-                    Invalid Email
-                </ng-container>
-            </span>
-        </div>
-        <div class="input">
-            <input class="inputBox" type="password" placeholder="Password" formControlName= 'password'>
-            <span class="error">
-                <ng-container *ngIf="(loginForm.get('password')?.errors?.['required'] && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty || isSubmitted))">
-                    Password Required
-                </ng-container>
-                <ng-container *ngIf="(loginForm.get('password')?.errors?.['passwordInvalid'] && !(loginForm.get('password')?.errors?.['required']))">
-                    Invalid Password
-                </ng-container>
-            </span>
-        </div>
-        <div class="button">
-            <button class="loginButton" type="submit">LOG IN</button>
-        </div>
-    </div>
-    </form>
-</div>
 </div>

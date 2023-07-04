@@ -21,21 +21,18 @@ export class AddUsersComponent {
 
   // gender: ['', [Validators.required]] 
   
-  array: any[]= [];
   addU(){
     const formData: any[]=[];
 
-    Object.keys(this.users.controls).forEach(controlName=>{
-      const control= this.users.get(controlName);
-      if(control){
-        this.array.push({
-          label: controlName,
-          value: control.value
-        })
-      }
-    })
-    console.log(this.array);
-    this.dataservice.setFormValue(this.array);
+
+    const user = {
+      emp: this.users.get('emp')?.value,
+      name: this.users.get('name')?.value,
+      email: this.users.get('email')?.value,
+      dob: this.users.get('dob')?.value
+    };
+    console.log(user);
+    this.dataservice.setFormValue(user);
     this.router.navigate(['users']);
   }
 

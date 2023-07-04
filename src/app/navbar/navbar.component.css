@@ -4,7 +4,8 @@ ul {
     padding: 10px;
     overflow: hidden;
     /* border-bottom: 2px solid #1f2b44; */
-    background-color: #1f2b44;
+    background-color: #486fa1;
+    border-bottom: 1px solid black;
   }
   
   li {
@@ -21,5 +22,6 @@ ul {
   }
   
   li a:hover {
-    background-color: #111;
+    /* background-color: #ffffff; */
+    color:#fbcdc9;
   }
