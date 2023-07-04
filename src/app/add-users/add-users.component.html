@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<h1 class="heading">Add User Details</h1>
+<div class="addUsers">
+    <div class="formImg">
+        <img class="image">
+    </div>
+    <div class="form">
+        <form [formGroup]="users" (ngSubmit)="addU()">
+            <div class="input">
+                <label class="label">EmpID:</label>
+                <input class="inputF" type="text" formControlName='emp'>
+            </div>
+            <div class="input">
+                <label class="label">Name:</label>
+                <input class="inputF" type="text" formControlName='name'>
+            </div>
+            <div class="input">
+                <label class="label">Email:</label>
+                <input class="inputF" type="text" formControlName='email'>
+            </div>
+            <div class="input">
+                <label class="label">DOB::</label>
+                <input class="inputF" type="date" formControlName='dob'>
+            </div>
+            <!-- <div class="input radio">
+            <p>Gender:</p>
+            Male <input class="radioF" type="radio" name="gender" formControlName='gender'> 
+            Female <input class="radioF" type="radio" name="gender" formControlName='gender'>
+        </div> -->
+            <div class="btnDiv">
+                <button class="addBtn" type="submit">ADD</button>
+            </div>
+
+        </form>
+    </div>
+</div>
