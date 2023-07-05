@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+<h1 class="heading">Update User Details</h1>
+<div class="addUsers">
+    <div class="formImg">
+        <img class="image">
+    </div>
+    <div class="form">
+        <form [formGroup]="users" (ngSubmit)="UpdateU()">
+            <div class="input">
+                <label class="label">EmpID:</label>
+                <input class="inputF" type="text" formControlName='emp'>
+                <span class="error">
+                    <ng-container
+                        *ngIf="(users.get('emp')?.errors?.['required'] && (users.get('emp')?.dirty || users.get('emp')?.dirty || users.get('emp')?.touched || isSubmitted)) ">
+                        Field Required</ng-container>
+                </span>
+            </div>
+            <div class="input">
+                <label class="label">Name:</label>
+                <input class="inputF" type="text" formControlName='name'>
+                <span class="error">
+                    <ng-container
+                        *ngIf="(users.get('name')?.errors?.['required'] && (users.get('name')?.dirty || users.get('name')?.touched ||isSubmitted))">
+                        Field Required</ng-container>
+                </span>
+            </div>
+            <div class="input">
+                <label class="label">Email:</label>
+                <input class="inputF" type="text" formControlName='email'>
+                <span class="error">
+                    <ng-container
+                        *ngIf="(users.get('email')?.errors?.['required'] && (users.get('email')?.dirty || users.get('email')?.touched ||isSubmitted))">
+                        Field Required</ng-container>
+                    <ng-container *ngIf="(users.get('email')?.invalid && !(users.get('email')?.errors?.['required']))">
+                        Invalid Email
+                    </ng-container>
+                </span>
+            </div>
+            <div class="input">
+                <label class="label">DOB::</label>
+                <input class="inputF" type="date" formControlName='dob'>
+                <span class="error">
+                    <ng-container
+                        *ngIf="(users.get('dob')?.errors?.['required'] && (users.get('dob')?.dirty || users.get('dob')?.touched || isSubmitted))">
+                        Field Required</ng-container>
+                </span>
+            </div>
+            <!-- <div class="input radio">
+            <p>Gender:</p>
+            Male <input class="radioF" type="radio" name="gender" formControlName='gender'> 
+            Female <input class="radioF" type="radio" name="gender" formControlName='gender'>
+        </div> -->
+            <div class="btnDiv">
+                <button class="addBtn" type="submit">UPDATE USER</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+</div>

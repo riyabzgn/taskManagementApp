@@ -1,0 +1,17 @@
+.container{
+    width:100%;
+    height:500vh;
+    background-color: #0e2537;
+}
+
+.taskForm{
+    width:40%;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.taskDesc{
+    height: 100px;
+}

@@ -1,0 +1,95 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width:100%;
+    height:100%;
+    background-color: #0e2537;
+}
+
+.form{
+    transform: translate(10%, 10%);
+    margin:10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addUsers{
+    display: flex;
+    background-color: #0e2537;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.radio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.input{
+    width:500px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    width:130px;
+}
+
+.inputF{
+    margin:10px;
+    width:1000px;
+    height:50px;
+    border: none;
+    background-color: rgb(235, 233, 233);
+
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px;
+}
+
+.addBtn{
+    width:100px;
+    height:50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #505c72;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.addBtn:hover{
+    width: 100%;
+}
+
+.error{
+    color: red;
+}
+
+.input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+.input.ng-valid{
+    border: 1px solid green;
+}

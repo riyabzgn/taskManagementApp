@@ -4,9 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  private formData: any[]=[];
+  private formData: any[]=[
+    {emp:'1', name:'Riya Bazgian', email:'riyabzgn9@gmail.com', dob:'03/27/2002'},
+    {emp:'2', name:'Pritha Shrestha', email:'pritha123@gmail.com', dob:'01/24/200'},
+  ];
 
   constructor() { }
+
+
+  updateUser(user: any) {
+    const index = this.formData.findIndex((u: any) => u.emp === user.emp);
+    if (index !== -1) {
+      this.formData[index] = user;
+    }
+  }
+  
 
   setFormValue(data: any){
     this.formData.push(data);

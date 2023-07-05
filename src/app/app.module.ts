@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { UsersComponent } from './users/users.component';
-import { TasksComponent } from './tasks/tasks.component';
-import { AddUsersComponent } from './add-users/add-users.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { UsersComponent } from './home/users/users.component';
+import { TasksComponent } from './home/tasks/tasks.component';
+import { AddUsersComponent } from './home/users/add-users/add-users.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { EditUserComponent } from './home/users/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsersComponent,
     TasksComponent,
     AddUsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

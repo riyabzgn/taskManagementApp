@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataService } from '../data.service';
+import { DataService } from '../../../data.service';
 
 @Component({
   selector: 'app-add-users',
@@ -12,18 +12,21 @@ export class AddUsersComponent {
 
   isLoggedIn= true;
 
+  isSubmitted= false;
   users= this.fb.group({
-    emp: [''],
-    name: [''],
-    email: [''],
-    dob: ['']
+    emp: ['',[Validators.required]],
+    name: ['',[Validators.required]],
+    email: ['',[Validators.required, Validators.email]],
+    dob: ['',[Validators.required]]
   })
 
   // gender: ['', [Validators.required]] 
-  
   addU(){
     const formData: any[]=[];
 
+    if (this.users.invalid) return;
+  
+    this.isSubmitted= true;
 
     const user = {
       emp: this.users.get('emp')?.value,

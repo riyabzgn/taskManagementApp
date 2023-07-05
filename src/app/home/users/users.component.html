@@ -1,11 +1,11 @@
 <app-navbar></app-navbar>
+<div class="body">
+  <div class="button">
+    <button class="addUserButton" type="submit" (click)="addUsers()">+ Add Users</button>
+  </div>
 
-<div class="button">
-   <button class="addUserButton" type="submit" (click)="addUsers()">+ Add Users</button>
-</div>
-
-<div class="container">
-    <h2>USER INFORMATION</h2>
+  <div class="container">
+    <h2 class="userHeading">USER INFORMATION</h2>
     <ul class="responsive-table">
       <li class="table-header">
         <div class="col col-1">Emp Code</div>
@@ -30,12 +30,14 @@
         <div class="col col-5"><button class="btn">Delete</button><button class="btn">Edit</button></div>
       </li> -->
       <li class="table-row" *ngFor="let formVal of formValue; let i=index ">
-        <div class="col col-1" >{{formVal.emp}}</div>
+        <div class="col col-1">{{formVal.emp}}</div>
         <div class="col col-2">{{formVal.name}} </div>
         <div class="col col-3">{{formVal.email}}</div>
         <div class="col col-4">{{formVal.dob}}</div>
-        <div class="col col-5"><button class="btn" (click)="deleteUser(i)">Delete</button><button class="btn">Edit</button></div>
+        <div class="col col-5"><button class="btn" (click)="deleteUser(i)">Delete</button>
+          <button class="btn" (click)="editUser(formVal.emp)">Edit</button></div>
         <!-- <div class="col col-5">{{formValue[4]['value']}}</div> -->
       </li>
     </ul>
   </div>
+</div>
