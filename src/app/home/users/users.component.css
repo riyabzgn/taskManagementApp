@@ -9,40 +9,50 @@
   
 }
 
+**{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
 .btn{
   width:100%;
   height:20px;
-  background-color: #788da0;
+  background-color: #ace0eb;
   /* border: 1px solid #0e2537; */
   border: none;
   border-radius: 8px;
 }
 
 .btn:hover{
-  background-color: #8da5bb;
+  background-color: #d9effb;
+  color: black;
+}
+
+.bgImage{
 
 }
 
 .userHeading{
-  color: white;
+  color: #ace0eb;
   margin-bottom:20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .addUserButton {
   width: 200px;
   height: 50px;
-  background-color: #788da0;
+  background-color: #ace0eb;
   border: none;
   border-radius: 30px;
 }
 
 .addUserButton:hover {
-  background-color: #0e2537;
-  color: white;
+  background-color: #d9effb;
+  color: black;
 }
 
 .body{
-  background-color: #0e2537;
+  /* background-color: #0e2537; */
   width: 100%;
   height: 400vh;
 
@@ -78,7 +88,7 @@ li {
   align-items: center;
 }
 .table-header {
-  background-color: #788da0;
+  background-color: #ace0eb;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -88,17 +98,21 @@ li {
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
 }
 .col-1 {
-  flex-basis: 15%;
+  flex-basis: 5%;
 }
 .col-2 {
-  flex-basis: 25%;
+  flex-basis: 20%;
 }
 .col-3 {
-  flex-basis: 25%;
+  flex-basis: 20%;
 }
 .col-4 {
-  flex-basis: 20%;
+  flex-basis: 25%;
 }
 .col-5 {
   flex-basis: 15%;
 }
+.col-6 {
+  flex-basis: 15%;
+}
+

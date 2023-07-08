@@ -1,51 +1,80 @@
 .heading{
     display: flex;
-    justify-content: center;
+    width:100%;
+    justify-content: space-around;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:30px;
     align-items: center;
+    color: #ace0eb;
+    margin-bottom:40px;
+}
+
+.blankspace{
+    height:50px;
+}
+
+form{
+    width:90%;
+}
+
+form[_ngcontent-ng-c4070282433] {
+    width:50%;
 }
 
 .container{
-    display: flex;
+    display:flex;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
-    width:100%;
-    height: 100vh;
+    /* width:300vh; */
+    height:100vh;
+    /* background-color: #0e2537; */
+}
+
+.formImage{
+    background-image: url('editImg.jpeg');
+    flex-basis: 40%;
+    /* background-color: #ace0eb; */
+    height: 100%;
+}
+
+
+.deleteEmailsBtn{
+color: red;
+width:50px;
+height:50px;
+font-size: 20px;
+}
+
+.deleterow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+    margin-bottom: 15px;
 }
 
 .form{
-    margin:10px;
-    padding:20px;
+    transform: translate(0%, 10%);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
+    flex-basis: 60%;
+    
 }
 
-.addUsers{
+form[_ngcontent-ng-c568010426] {
+    width:70%;
+}
+
+/* .addUsers{
     display: flex;
-    /* border: 1px solid #505c72; */
+    background-color: #0e2537;
     align-items: center;
     flex-direction: row;
-    /* width:90%; */
-    /* justify-content: space-evenly; */
-    /* transform: translate(8%, 10%); */
-    width:80%;
-}
+    justify-content: center;
 
-.formImg{
-    display: flex;
-    background-color: #505c72;
-    width:40%;
-}
-
-.image{
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-    height:100%;
-    background-color: #505c72;
-}
+} */
 
 .radio{
     display: flex;
@@ -54,25 +83,49 @@
     column-gap: 5px;
 }
 
-.input{
-    width:500px;
+.addIdBtn{
+    width:100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    justify-content:flex-end;
 
-.label{
-    width:130px;
 }
 
 .inputF{
-    margin:10px;
-    width:1000px;
-    height:50px;
+    color: black;
+
+    width:100%;
+    height:30px;
     border: none;
     background-color: rgb(235, 233, 233);
+    padding:10px;
+    border:none;
+    border-bottom:1px solid #000000;
+    border-radius: 5px;
 
+}
+
+.input{
+    /* width:100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:#ffffff;
+    row-gap: 20px;
+}
+
+.indexlabel{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis:10%;
+    color: #000000;
+    
+}
+
+.label{
+    width:70px;
+    color: #000000;
+    
 }
 
 .btnDiv{
@@ -81,28 +134,49 @@
     margin-top:10px;
 }
 
+.deleteEmailsBtn{
+    border-color: red;
+}
+
 .addBtn{
-    width:300px;
+    width:100%;
     height:50px;
     border: none;
     border-radius: 5px;
-    background-color: #505c72;
+    background-color: #d9effb;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
 
+.addEmailsBtn{
+    height:30px;
+    width:80px;
+    border: none;
+    background-color: #d0dee5;
+    border: 0.5px solid green;
+}
+
 .addBtn:hover{
-    width: 100%;
+    background-color: #d0dee5;
+
 }
 
 .error{
     color: red;
 }
 
-.input.ng-invalid.ng-touched{
-    border: 1px solid red;
+input[type="date"]{
+    /* background-color: white; */
+    color: black;
+    border: none;
+    font-size: 13px;
+    outline: none;
+    border-radius: 5px;
+    padding:8px;
+    
 }
 
-.input.ng-valid{
-    border: 1px solid green;
+::-webkit-calendar-picker-indicator{
+    /* width:100%; */
+    background-color: #ffffff ;
 }

@@ -11,6 +11,7 @@ import { TasksComponent } from './home/tasks/tasks.component';
 import { AddUsersComponent } from './home/users/add-users/add-users.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { EditUserComponent } from './home/users/edit-user/edit-user.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { EditUserComponent } from './home/users/edit-user/edit-user.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

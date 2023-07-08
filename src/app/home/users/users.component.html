@@ -1,42 +1,31 @@
 <app-navbar></app-navbar>
 <div class="body">
+  <div class="image">
+    <img src="bgImage">
+  </div>
   <div class="button">
     <button class="addUserButton" type="submit" (click)="addUsers()">+ Add Users</button>
   </div>
 
   <div class="container">
-    <h2 class="userHeading">USER INFORMATION</h2>
+    <h2 class="userHeading">USER</h2>
     <ul class="responsive-table">
       <li class="table-header">
-        <div class="col col-1">Emp Code</div>
+        <div class="col col-1">E-ID</div>
         <div class="col col-2">Name</div>
         <div class="col col-3">Email</div>
-        <div class="col col-4">DOB</div>
-        <div class="col col-5">Actions</div>
-        <!-- <div class="col col-5">Gender</div> -->
+        <div class="col col-4">Phone No</div>
+        <div class="col col-5">DOB</div>
+        <div class="col col-6">Actions</div>
       </li>
-      <!-- <li class="table-row">
-        <div class="col col-1">202000533</div>
-        <div class="col col-2">Riya Bazgain </div>
-        <div class="col col-3">riyabzgn9@gmail.com</div>
-        <div class="col col-4">03/27/2002</div>
-        <div class="col col-5"><button class="btn">Delete</button><button class="btn">Edit</button></div>
-      </li>
-      <li class="table-row">
-        <div class="col col-1">202000406</div>
-        <div class="col col-2">Pritha Shrestha</div>
-        <div class="col col-3">pritha@gmail.com</div>
-        <div class="col col-4">01/12/2000</div>
-        <div class="col col-5"><button class="btn">Delete</button><button class="btn">Edit</button></div>
-      </li> -->
       <li class="table-row" *ngFor="let formVal of formValue; let i=index ">
         <div class="col col-1">{{formVal.emp}}</div>
         <div class="col col-2">{{formVal.name}} </div>
-        <div class="col col-3">{{formVal.email}}</div>
-        <div class="col col-4">{{formVal.dob}}</div>
-        <div class="col col-5"><button class="btn" (click)="deleteUser(i)">Delete</button>
+        <div class="col col-3">{{formVal.emails}}</div>
+        <div class="col col-4">{{formVal.phNo}}</div>
+        <div class="col col-5">{{formVal.dob}}</div>
+        <div class="col col-6"><button class="btn" (click)="deleteUser(i)">Delete</button>
           <button class="btn" (click)="editUser(formVal.emp)">Edit</button></div>
-        <!-- <div class="col col-5">{{formValue[4]['value']}}</div> -->
       </li>
     </ul>
   </div>
