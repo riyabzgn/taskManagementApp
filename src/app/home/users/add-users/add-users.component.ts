@@ -38,7 +38,7 @@ export class AddUsersComponent implements OnInit{
     const user = {
       emp: this.users.get('emp')?.value,
       name: this.users.get('name')?.value,
-      email: this.users.get('emails')?.value,
+      email: this.users.get('email')?.value,
       phNo: this.users.get('phNo')?.value,
       dob: this.users.get('dob')?.value
     };

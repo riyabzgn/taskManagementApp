@@ -21,8 +21,10 @@
       <li class="table-row" *ngFor="let formVal of formValue; let i=index ">
         <div class="col col-1">{{formVal.emp}}</div>
         <div class="col col-2">{{formVal.name}} </div>
-        <div class="col col-3">{{formVal.emails}}</div>
-        <div class="col col-4">{{formVal.phNo}}</div>
+        <div class="col col-3">
+          <span *ngFor="let email of formVal.email">{{email}}<br></span>
+        </div>
+                <div class="col col-4">{{formVal.phNo}}</div>
         <div class="col col-5">{{formVal.dob}}</div>
         <div class="col col-6"><button class="btn" (click)="deleteUser(i)">Delete</button>
           <button class="btn" (click)="editUser(formVal.emp)">Edit</button></div>
