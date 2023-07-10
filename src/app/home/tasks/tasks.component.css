@@ -1,17 +1,118 @@
 .container{
+    display:flex;
+    flex-direction: row;
     width:100%;
-    height:500vh;
-    background-color: #0e2537;
+    height:200vh;
+    background-color: #DBE9F4;
 }
 
 .taskForm{
+    flex-basis: 20%;
     width:40%;
-    height:400px;
     display:flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: #769EAB ;
+    border-radius: 10px;
+    color: white;
+    margin:20px;
+    margin-top: 30px;
+
 }
+
+.charts{
+    flex: 1;
+    flex-basis: 20%;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    width:90%;
+}
+
+.inputF{
+    margin-bottom:20px;
+    border-radius: 3px;
+    border: 2px solid #a1d8e9;
+    background-color: transparent;
+}
+
 .taskDesc{
-    height: 100px;
+    height:100px;
+}
+
+.radiobtn{
+    display:flex;
+    justify-content: space-around;
+    border:none;
+}
+
+.addTaskBtn{
+    border:none;
+    border-radius: 3px;
+    color: #769EAB;
+    padding:3px;
+}
+
+.addTaskBtn:hover{
+    border: 5px solid #638793;
+}
+
+
+.tasks{
+    display:flex;
+    flex-basis: 60%;
+    margin:10px;
+    margin-top:20px;
+}
+
+
+.priority1{
+    margin:10px;
+    background-color: #40678493;
+    width:250px;
+    height:200px;
+    border-radius: 5px;
+    color:white;
+
+}
+
+.priority2{
+    margin:10px;
+    color:white;
+    background-color: #5a97abb3;
+    width:250px;
+    height:200px;
+    border-radius: 5px;
+}
+
+.priority3{
+    margin:10px;
+    color:#406784;
+    background-color: #77cbd286;
+    width:250px;
+    height:200px;
+    border-radius: 5px;
+}
+
+.addSubTask{
+    border:1.5px solid green;
+    border-radius: 3px;
+    color: #769EAB;
+    padding:3px;
+    margin:5px;
+}
+
+.addSubTask:hover{
+    border:2px solid green;
+
+}
+
+input[type="date"]{
+    color: #ffffff;
+    border: 2px solid #a1d8e9;
+    font-size: 13px;
+    outline: none;
+    padding:8px;
 }

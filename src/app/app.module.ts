@@ -12,6 +12,9 @@ import { AddUsersComponent } from './home/users/add-users/add-users.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { EditUserComponent } from './home/users/edit-user/edit-user.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ChartsComponent } from './home/tasks/charts/charts.component';
+import { ChartModule } from 'angular-highcharts';
+import { HighchartsComponent } from './home/highcharts/highcharts.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TasksComponent,
     AddUsersComponent,
     NavbarComponent,
-    EditUserComponent
+    EditUserComponent,
+    ChartsComponent,
+    HighchartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    ReactiveFormsModule, FontAwesomeModule
+    ReactiveFormsModule, FontAwesomeModule,
+    ChartModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

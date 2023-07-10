@@ -29,7 +29,7 @@
                 <div class="deleterow" *ngFor="let emailId of emails.controls; let i=index">
                     <!-- <label class="indexlabel" for="email-{{i}}">Email{{i+1}} </label> -->
                     <input class="inputF" type="text" [formControlName]='i' placeholder="Email {{i+1}}: xyz@abc.com">
-                    <button type="button" (click)="deleteEmails(i)" class="deleteEmailsBtn">- </button>
+                    <button type="button" (click)="deleteEmails(i)" [disabled]="!canDeleteEmail()" class="deleteEmailsBtn">- </button>
                 </div>
                 <br>
                 <span class="error" *ngFor="let i=index">

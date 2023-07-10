@@ -1,0 +1,63 @@
+
+
+.container{
+    width:100%;
+    height:60vh;
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex:1;
+}
+
+.chartItem{
+    flex:1;
+    margin:20px;
+    height: 50vh;
+    /* background-color: black; */
+}
+
+#main1{
+    border:2px solid black;
+    flex:1;
+    margin:20px;
+    height: 50vh;
+}
+
+.viewBtn{
+    position:absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(6%,7%);
+    background-color: rgba(240, 248, 255, 0.961);
+    width:650px;
+    height: 280px;
+}
+
+.button{
+    width:100px;
+    height:50px;
+    border: none;
+}
+
+.viewBtn:hover{
+    background-color: rgba(240, 248, 255, 0.669);
+
+}
+
+#main2{
+    flex:1;
+    margin:20px;
+    height: 50vh;
+}
+#main3{
+    flex:1;
+    margin:20px;
+    height: 50vh;
+}
+#main4{
+    flex:1;
+    margin:20px;
+    height: 50vh;
+}

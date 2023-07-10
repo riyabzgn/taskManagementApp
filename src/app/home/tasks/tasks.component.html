@@ -2,10 +2,59 @@
 
 <div class="container">
     <div class="taskForm">
-        <form class="taskForm">
-            <input type="text" placeholder="Task Title" class="taskTitle">
-            <input type="text" placeholder="Description" class="taskDesc">
-            <button type="submit" class="addTaskBtn">ADD TASK</button>
+        <br>
+        <h3>Manage Tasks</h3>
+
+        <form class="form">
+            <label>Task Title:</label>
+            <input type="text" class="inputF">
+            <label>Description</label>
+            <input type="text" class="inputF taskDesc">
+           <label>Choose Priority:</label>
+            <div class="radiobtn inputF">
+                <input type="radio" name="priority">
+                <label for="priority">1st</label>
+            <input type="radio" name="priority">
+            <label for="priority">2nd</label>
+            <input type="radio" name="priority">
+            <label for="priority">3rd</label>
+        </div>
+        <label>Due Date:</label>
+        <input type="date" class="inputF"> 
+        <button type="button" class="addSubTask">+Add Sub Task+</button>
+        <span>
+            <ng-container *ngIf="">
+                <label>Sub Task:</label>
+                <input type="text">
+            </ng-container>
+        </span>
+        <button type="submit" class="addTaskBtn">ADD TASK</button>
+
         </form>
     </div>
+    <div class="tasks">
+        <div class="taskItem">
+            <div class="priority1"></div>
+            <div class="priority1"></div>
+            <div class="priority1"></div>
+        </div>
+        
+        <div class="taskItem">
+            <div class="priority2"></div>
+            <div class="priority2"></div>
+            <div class="priority2"></div>
+        </div>
+        <div class="taskItem">
+            <div class="priority3"></div>
+            <div class="priority3"></div>
+            <div class="priority3"></div>
+        </div>
+
+        
+
+    </div>
+    <div class="charts">
+        <app-charts></app-charts>
+    </div>
+
 </div>

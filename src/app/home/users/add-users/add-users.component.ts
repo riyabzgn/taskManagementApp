@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../../data.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class AddUsersComponent implements OnInit{
     dob: ['',[Validators.required]]
   })
 
-  constructor(private fb: FormBuilder, private dataservice: DataService, private router: Router){}
+  constructor(private fb: FormBuilder, private dataservice: DataService, private router: Router, private route: ActivatedRoute){}
 
   ngOnInit(){
   }
@@ -60,6 +60,10 @@ export class AddUsersComponent implements OnInit{
 
   deleteEmails(index:number): void{
     this.emails.removeAt(index);
+  }
+  canDeleteEmail(): boolean {
+    const emailsArray = this.users.get('email') as FormArray;
+    return emailsArray.length > 1;
   }
   
   phoneValidator(): ValidatorFn {

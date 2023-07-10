@@ -17,13 +17,13 @@ export class EditUserComponent implements OnInit{
     name: ['',[Validators.required]],
     // email: ['',[Validators.required, Validators.email]],
     email: this.fb.array([
-      this.fb.control('')],[Validators.required]),
+      this.fb.control('')]),
     phNo: ['', [this.phoneValidator()]],
     dob: ['',[Validators.required]]
   })
 
   constructor(private fb: FormBuilder, private dataservice: DataService, private router: Router, private route: ActivatedRoute){
-    this.id = this.route.snapshot.paramMap.get('id')
+    this.id = this.route.snapshot.paramMap.get('id');
     console.log('Check index -->', this.id)
     this.users.get('phNo')?.setValue('+9779000000012');
   }
@@ -32,30 +32,14 @@ export class EditUserComponent implements OnInit{
     return this.users.get('email') as unknown as FormArray;
   }
 
-  // atleastOneEmail(): ValidatorFn {
-  //   return (control: AbstractControl):
-  //   {[key:string] : any} | null=>{
-  //       const valid= this.emails.length>0;
-  //       const invalid= this.emails.length<1;
-  //       const isValid= valid;
-  //       return isValid? null : {EmailRequired: true};
-  //     };
-  //   }
-
   addEmails(){
     this.emails.push(this.fb.control(''));
   }
 
-  deleteEmail(index: number){
-    if(this.emails.length>1){
+  deleteEmails(index: number){
       this.emails.removeAt(index);
 
     }
-    }
-
-  // deleteEmails(index:number):void {
-  //   this.users.removeAt(index);
-  // }
 
   user: any;
 
@@ -66,7 +50,7 @@ export class EditUserComponent implements OnInit{
       this.users.patchValue({
         emp: this.user.emp,
         name: this.user.name,
-        email: this.user.emails,
+        email: this.user.email,
         phNo: this.user.phNo,
         dob: this.user.dob
       });
@@ -84,13 +68,14 @@ export class EditUserComponent implements OnInit{
   }
   
   UpdateU() {
-    if (this.users.invalid) return;
-    
     this.isSubmitted = true;
+
+    if (this.users.invalid){ return;}
+    
   
     if (this.user) {
       this.user.name = this.users.get('name')?.value;
-      this.user.email = this.users.get('emails')?.value;
+      this.user.email = this.users.get('email')?.value;
       this.user.phNo = this.users.get('phNo')?.value;
       this.user.dob = this.users.get('dob')?.value;
   
